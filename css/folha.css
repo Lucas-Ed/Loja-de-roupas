@@ -5,6 +5,7 @@
 
 /* Ajustes em todo site */
 body {
+	width: 100%;
 	font-family: Arial;
 	padding: 10px;
 	background: #13131F !important;
@@ -36,7 +37,7 @@ body {
 	display: block;
 	color: #f2f2f2;
 	text-align: center;
-	padding: 14px 16px;
+	padding: 16px 18px;
 	text-decoration: none;
 }
 
@@ -44,6 +45,7 @@ body {
 .topnav a:hover {
 	background-color: #b170f6; /*altera a cor do hover do menu*/
 	color: black;
+	text-decoration: none; /* Remove o sublinhado */
 }
 
 /* Left column */
@@ -147,8 +149,22 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+		
     }
 }
+/*Configuração texto de ajuda com efeito*/
+a.link-texto {
+	color: white;
+	text-decoration: none; /* Remove o sublinhado */
+}
+a.link-texto:hover {
+    color: #552586;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+	transition: color 0.3s ease-in-out;
+	text-decoration: none; /* Remove o sublinhado */
+}
+/*------------------------------------------------------------------*/
 .sellcard { float: left;width: 23.40%; margin: 10px; }
 .sellcard img { width: 80%; display: block; margin-left: auto; margin-right: auto; margin-top: 50px; }
 .descricao {text-align:center; font-size: 15px; font-family: Helvetica,"Helvetica Neue",Arial,"Lucida Grande",sans-serif;font-style: normal; font-weight: 400; color: white; line-height: 1.6;}
