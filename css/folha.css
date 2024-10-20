@@ -132,16 +132,17 @@ body {
 
 #info {
     border-top: solid 1px #552586;
-    padding-top: 50px;
+    padding-top: 40px;
     padding-bottom: 50px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
  
     #info {
         display: flex;
        flex-direction: column-reverse;
        align-items: start;
+
     }
 
     #ajuda{
@@ -149,6 +150,7 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+		padding-top: 50px;
 		
     }
 }
@@ -164,6 +166,7 @@ a.link-texto:hover {
 	transition: color 0.3s ease-in-out;
 	text-decoration: none; /* Remove o sublinhado */
 }
+
 /*------------------------------------------------------------------*/
 .sellcard { float: left;width: 23.40%; margin: 10px; }
 .sellcard img { width: 80%; display: block; margin-left: auto; margin-right: auto; margin-top: 50px; }
@@ -210,6 +213,40 @@ a.link-texto:hover {
 	background-color: #b170f6; /*altera a cor do hover do menu*/
 	color: black;
 }
+
+@media (max-width: 768px) {
+
+	.button {
+	  margin-left: 90px;
+	}
+  
+  }
+/* Botão de scroll página */
+.scroll-bar::-webkit-scrollbar {
+    width: 14px;
+  }
+  
+.scroll-bar::-webkit-scrollbar-thumb {
+    background: #8257E6;
+    border-radius: 0px;
+    border:0px solid #8257E6;
+  }
+/* Estilos para Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #8257E6 black;
+  }
+  
+.efeito_text {
+	background-image: linear-gradient(80deg, #8257E6,#9c1040 100%); 
+	background-repeat: no-repeat; 
+	background-size: 100% 0.4em; 
+	background-position: 0 80%;
+}
+
+
+    
+
 /*--------------------------footer------------------------------*/
 
 footer {
@@ -231,4 +268,11 @@ footer {
 	color: white;
 	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+/* @media (max-width: 500px) {
+
+	#ajuda {
+	  padding-top: 20px;
+	}
+  
+  } */
 /*--------------------------footer------------------------------*/
