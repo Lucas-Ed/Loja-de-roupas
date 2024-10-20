@@ -1,0 +1,218 @@
+/* Organizando todo o site em caixa */
+* {
+	box-sizing: border-box;
+}
+
+/* Ajustes em todo site */
+body {
+	font-family: Arial;
+	padding: 10px;
+	background: #13131F !important;
+	/*Background color do fundo dos produtos*/
+}
+
+/* Ajustes no cabeçalho principal */
+.header {
+	padding: 30px;
+	text-align: center;
+	background: #13131F;/*Background Color do cabeçalho*/
+}
+
+/* Ajustando o tamanho do cabeçalho */
+.header h1 {
+	font-size: 50px;
+	color: white;
+}
+
+/* Ajustando a cor e escondendo o conteúdo excedido */
+.topnav {
+	overflow: hidden;
+	background-color: #552586; /* Background color menu*/
+}
+
+/* Ajuste nos LINKS do Menu principal */
+.topnav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* Mude a cor ou passar o mouse */
+.topnav a:hover {
+	background-color: #b170f6; /*altera a cor do hover do menu*/
+	color: black;
+}
+
+/* Left column */
+.leftcolumn {   
+	float: left;
+	width: 15%;
+}
+
+/* Right column */
+.rightcolumn {
+	float: left;
+	width: 85%;
+	background-color: #f1f1f1;
+	padding-left: 20px;
+}
+
+.fakeimg {
+	background-color: #aaa;
+	width: 100%;
+	padding: 20px;
+}
+
+/* Efeito de cartão */
+.card {
+	background-color: white;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+/* Correções de estrutura nas colunas */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+.caixa {
+	padding: 60px 0;
+	border-top: 1px solid #552586;/*borda na horizontal superior da seção*/
+	
+}
+.section_texts{
+	padding-top: 130px;
+	width: 100%;
+}
+.dotted {
+    /* border-style: dotted; */
+	color: white;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  .dashed {
+    border-style: dashed;
+	color: red;
+  }
+
+.arre1 {
+	border-style: dotted;
+	color:  #552586;
+	border-radius: 12px;
+	padding: 5px;
+  }
+
+/* Rodapé */
+.footer {
+	padding: 20px;
+	text-align: center;
+	background: #ddd;
+	margin-top: 20px;
+}
+
+/* Ajustando o espaçamento das imagens de formas de pagamento */
+.grid {
+	display: flex;
+	gap: 10px; /* Espaçamento entre os elementos */
+  }
+  
+  .grid svg {
+	margin: 0 2px; /* Espaçamento lateral de 2px */
+  }
+/*Cor dos  svg's da rede social*/
+  #icon-redes {
+	fill: #552586;
+  }
+
+#info {
+    border-top: solid 1px #552586;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 400px) {
+ 
+    #info {
+        display: flex;
+       flex-direction: column-reverse;
+       align-items: start;
+    }
+
+    #ajuda{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.sellcard { float: left;width: 23.40%; margin: 10px; }
+.sellcard img { width: 80%; display: block; margin-left: auto; margin-right: auto; margin-top: 50px; }
+.descricao {text-align:center; font-size: 15px; font-family: Helvetica,"Helvetica Neue",Arial,"Lucida Grande",sans-serif;font-style: normal; font-weight: 400; color: white; line-height: 1.6;}
+.compra { text-align: center; }
+.valor{ text-align:center; font-size: 0.8em; font-weight: bold; color: white; }
+
+/* Transformando em um Layout responsivo - telas medias */
+@media screen and (max-width: 800px) {
+	.leftcolumn, .rightcolumn {   
+		width: 100%;
+		padding: 0;
+	}
+	.topnav a {
+		float: none;
+		width: 100%;
+	}
+	.sellcard { width: 100%; }
+}
+
+/* Transformando em um Layout responsivo - telas menores */
+@media screen and (max-width: 400px) {
+	.topnav a {
+		float: none;
+		width: 100%;
+	}
+	.sellcard { width: 100%; }
+}
+/* botão de adicionar ao carrinho*/
+.button {
+	background-color: #552586;
+	border: none;
+	color: rgb(253, 253, 253);
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	margin-left: 50px;
+  }
+  .button:hover {
+	background-color: #b170f6; /*altera a cor do hover do menu*/
+	color: black;
+}
+/*--------------------------footer------------------------------*/
+
+footer {
+    border-top: solid 1px #552586;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /*background-color: #333;
+    color: white;*/
+    text-align: center;
+    padding: 40px;
+}
+
+#icon-redes {
+    color: #f16f26;
+}
+
+.texts_footer {
+	color: white;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/*--------------------------footer------------------------------*/
