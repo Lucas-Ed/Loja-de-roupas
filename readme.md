@@ -47,7 +47,7 @@ O Projeto é de um site de Loja de Roupas, o projeto é para fins de praticar du
 
 ## 🔖 Layout
 
-![](imagens/screencapture.png) 
+![](imagens/screencapture_.png) 
 
 
 
