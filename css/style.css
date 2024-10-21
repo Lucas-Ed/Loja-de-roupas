@@ -1,0 +1,303 @@
+/* Ajustes em toda página */
+/* Organizando todo o site em caixa */
+* {
+	box-sizing: border-box;
+}
+h1 {
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	color: white;
+	font-family: Helvetica,Arial,sans-serif;
+	
+}
+body {
+	width: 100%;
+	/* font-family: Arial; */
+	/* padding: 10px; - da um espaço na lateral do site*/
+    background: #13131F !important;
+	/*Background color do fundo dos produtos*/
+}
+/* Botão de scroll página */
+.scroll-bar::-webkit-scrollbar {
+	width: 14px !important;
+  }
+  
+  .scroll-bar::-webkit-scrollbar-thumb {
+	background: #552586 !important;
+	border-radius: 1px !important;
+	border: 0px solid #552586 !important;
+  }
+  
+  /* Estilos para Firefox */
+  * {
+	scrollbar-width: thin !important;
+	scrollbar-color: #552586 black !important;
+  }
+/*---------------------------------------------*/
+/*header*/
+/* Ajustes no cabeçalho principal */
+.header {
+	padding: 30px;
+	text-align: center;
+	background: #13131F;/*Background Color do cabeçalho*/
+}
+
+/* Ajustando o tamanho do cabeçalho */
+.header h1 {
+	font-size: 50px;
+	color: white;
+}
+.efeito_text {
+	background-image: linear-gradient(80deg, #8257E6,#9c1040 100%); 
+	background-repeat: no-repeat; 
+	background-size: 100% 0.4em; 
+	background-position: 0 80%;
+}
+/*---------------------------------------------*/
+/*navbar*/
+/* Ajustando a cor e escondendo o conteúdo excedido */
+.topnav {
+	overflow: hidden;
+	background-color: #552586; /* Background color menu*/
+}
+
+/* Ajuste nos LINKS do Menu principal */
+.topnav a {
+	float: left;
+    margin-left: 50px;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 16px 18px;
+	text-decoration: none;
+
+}
+#topnav {/*fonte do navbar, o span é pra aplicar nas tags ,<span> da seção contato, e nas tags p a fonte*/
+        font-weight: 900;
+        letter-spacing: -0.05em;
+        color: white;
+        font-family: Helvetica,Arial,sans-serif; 
+}
+
+/* Mude a cor ou passar o mouse */
+.topnav a:hover {
+	background-color: #b170f6; /*altera a cor do hover do menu*/
+	color: black;
+	text-decoration: none; /* Remove o sublinhado */
+}
+/*---------------------------------------------*/
+/* Carousel */
+#home {
+	height: 100%;
+	overflow-x: hidden;
+}
+.capa {
+	text-align: center;
+}
+/*Seção textual*/
+#carousel {
+	background: url(../imagens/capa.png),
+				url(../imagens/ruido.png);
+	background-attachment: fixed;
+	padding-top: 200px;
+    color: white;/*cor do texto*/
+}
+
+.carousel-control-next, .carousel-control-prev {
+	width: 5%;
+}
+/* Botões do Carousel */
+.btn-custom {
+	color: white;
+	border-radius: 500px;
+	-webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+    text-transform: uppercase;
+    transition: background 0.4s, color 0.4s;
+    padding: 10px 20px;
+}
+
+.btn-roxo {
+	background: #7c25f8;
+}
+
+.btn-roxo:hover {
+	background: #6207e3;
+	color: white;
+}
+
+.btn-branco {
+	border: 2px solid white;
+}
+
+.btn-branco:hover {
+	background-color: white;
+	color: black;
+}
+
+/*---------------------------------------------*/
+/*seção dos cards*/
+#ofertas {
+	/* Estilos para a seção de ofertas */
+	margin-top: 200px;
+  }
+.sellcard { float: left;width: 23.40%; margin: 5px;}
+.sellcard img { width: 80%; display: block; margin-left: auto; margin-right: auto; margin-top: 50px; }
+.descricao {text-align:center;
+           font-size: 15px;
+           font-family: Helvetica,"Helvetica Neue",Arial,"Lucida Grande",sans-serif;font-style: normal;
+           font-weight: 400; color: white; line-height: 1.6;}
+.compra { text-align: center; }
+.valor{ text-align:center; font-size: 0.8em; font-weight: bold; color: white; }
+
+
+/* Transformando em um Layout responsivo - telas medias */
+@media screen and (max-width: 800px) {
+	.leftcolumn, .rightcolumn {   
+		width: 100%;
+		padding: 0;
+	}
+	.topnav a {
+		float: none;
+		width: 100%;
+	}
+	.sellcard { width: 100%; }
+}
+
+/* Transformando em um Layout responsivo - telas menores */
+@media screen and (max-width: 400px) {
+	.topnav a {
+		float: none;
+		width: 100%;
+	}
+	.sellcard { width: 100%; }
+}
+/* botão de adicionar ao carrinho*/
+.button {
+	background-color: #552586;
+	border: none;
+	color: rgb(253, 253, 253);
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+	margin-left: 50px;
+  }
+  .button:hover {
+	background-color: #b170f6; /*altera a cor do hover do menu*/
+	color: black;
+}
+
+@media (max-width: 768px) {
+
+	.button {
+	  margin-left: 90px;
+	}
+  
+  }
+/*---------------------------------------------*/
+/*seção de texto com 1 foto*/
+  .section_texts{
+	padding-top: 130px;
+	width: 100%;
+}
+.arre1 {
+	border-style: dotted;
+	color:  #552586;
+	border-radius: 12px;
+	padding: 5px;
+  }
+/*---------------------------------------------*/
+/*seção contato*/
+  .caixa {
+	padding: 60px 0;
+	border-top: 1px solid #552586;/*borda na horizontal superior da seção*/
+	
+}
+/*--------------------------footer------------------------------*/
+
+footer {
+    border-top: solid 1px #552586;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    /*background-color: #333;
+    color: white;*/
+    text-align: center;
+    padding: 40px;
+}
+
+#icon-redes {
+    color: #f16f26;
+}
+
+.texts_footer {
+	color: white;
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.section_texts{
+    padding-top: 130px;
+	width: 100%;
+}
+/* @media (max-width: 500px) {
+
+	#ajuda {
+	  padding-top: 20px;
+	}
+  
+  } */
+  #info {
+    border-top: solid 1px #552586;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+@media (max-width: 500px) {
+ 
+    #info {
+        display: flex;
+       flex-direction: column-reverse;
+       align-items: start;
+
+    }
+
+    #ajuda{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+		padding-top: 50px;
+		
+    }
+}
+/*Configuração texto de ajuda com efeito*/
+a.link-texto {
+	color: white;
+	text-decoration: none; /* Remove o sublinhado */
+}
+a.link-texto:hover {
+    color: #552586;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra */
+    transform: scale(1.05); /* Aumenta ligeiramente o tamanho */
+	transition: color 0.3s ease-in-out;
+	text-decoration: none; /* Remove o sublinhado */
+}
+.texts_footer .d-flex.gap-2 {
+    /* espaçamento redes sociais */
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .d-flex.grid.gap-3 {
+    /* espaçamento redes formas de pagamento */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+
+/*--------------------------footer------------------------------*/
