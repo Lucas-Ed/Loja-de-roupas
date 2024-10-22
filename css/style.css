@@ -205,7 +205,11 @@ input:checked ~ .menu-hamburguer-elements{
     header{
         height: 20%;
     }
-
+    input:checked ~ .menu-hamburguer-elements {
+        /* Exibir quando o checkbox estiver marcado */
+        display: flex;
+      }
+    
     .menu-hamburguer-elements a:hover{
         color: #b170f6;/*cor dos links do menu hamb. quando passa o mouse*/
     }
@@ -227,10 +231,10 @@ input:checked ~ .menu-hamburguer-elements{
         height: 90%;
         background-color: #552586;/*cor quando abre o hamb.*/
         position: absolute;/*aqui o fixed ele fica fixo quando scrollado */
-        right: -60%;/* Mudei de 'left' para 'right' para que abra da direita */
+        right: 0%;/* Mudei de 'left' para 'right' para que abra da direita */
         top: 280px;/*distancia do topo da página*/
         transition: left cubic-bezier(1,0,0,1) .8s;
-        display: flex;
+        display: none;
         align-items: center;
         flex-direction: column;
         justify-content: center;
