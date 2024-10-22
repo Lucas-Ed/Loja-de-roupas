@@ -232,7 +232,7 @@ input:checked ~ .menu-hamburguer-elements{
         background-color: #552586;/*cor quando abre o hamb.*/
         position: absolute;/*aqui o fixed ele fica fixo quando scrollado */
         right: 0%;/* Mudei de 'left' para 'right' para que abra da direita */
-        top: 280px;/*distancia do topo da página*/
+        top: 290px;/*distancia do topo da página*/
         transition: left cubic-bezier(1,0,0,1) .8s;
         display: none;
         align-items: center;
