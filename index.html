@@ -18,18 +18,36 @@
 </head>
 <body>
     <section>
-        <div class="header">
-            <h1 class="efeito_text">Loja de Roupas e Acessórios</h1>
-          </div>
-          
-          <div class="topnav" id="topnav">
-            <a href="./index.html">Home</a>
-            <a href="./roupas.html">Roupas</a>
-            <a href="./acessorios.html">Acessórios</a>
-          <a href="./compra.html" style="float:right"><img src="./imagens/compra.png" width="30px" style="vertical-align: middle;">
-            <span>Carrinho de compras</span></a>
-            <!--<span id="contador-carrinho" class="badge bg-primary">0</span>-->
-          </div>
+      <div class="headers">
+        <h1 class="efeito_text">Loja de Roupas e Acessórios</h1>
+      </div>
+      <!---inicio---navbar---->
+      <header>
+        <nav class="menu-hamburger body_">
+
+          <input id="menu-hamburguer" type="checkbox" />
+          <label for="menu-hamburguer">
+              <div class="menu">
+                  <span class="hamburguer"></span>
+              </div>
+          </label>
+          <ul class="menu-hamburguer-elements">
+              <li>
+                  <a href="#">Home</a>
+              </li>
+              <li>
+                  <a href="./roupas.html">Roupas</a>
+              </li>
+              <li>
+                  <a href="./acessorios.html">Acessórios</a>
+              </li>
+              <li>
+                  <a href="./compra.html"><img src="./imagens/compra.png" width="30px"><span>Carrinho de compras</span></a>
+              </li><!---O style alinha o botão de entrar-->
+              <li><a style="margin-right: 80px;" class="btn btn-outline-light ml-2" href="#">Entrar</a></li>
+          </ul>
+        </nav>
+    </header>
     </section><!----Fim do navbar-->
 
     <section id="home" class="d-flex">
@@ -249,6 +267,8 @@
     <footer class="texts_footer">
         <nav class="container-fluid">
             <p class="m-0" >&copy; 2024 Loja de Roupas- Todos os direitos reservados.</p>
+            <br>
+            <p>Feito com ❤️ por: <a href="https://linktr.ee/lucas.007"> Lucas Eduardo Rosolem</a></p>
         </nav>
     </footer>
 

@@ -1,8 +1,5 @@
 /* Ajustes em toda página */
-/* Organizando todo o site em caixa */
-* {
-	box-sizing: border-box;
-}
+
 h1 {
 	font-weight: 900;
 	letter-spacing: -0.05em;
@@ -32,18 +29,20 @@ body {
   * {
 	scrollbar-width: thin !important;
 	scrollbar-color: #552586 black !important;
+	box-sizing: border-box;
   }
+
 /*---------------------------------------------*/
 /*header*/
 /* Ajustes no cabeçalho principal */
-.header {
+.headers {
 	padding: 30px;
 	text-align: center;
 	background: #13131F;/*Background Color do cabeçalho*/
 }
 
 /* Ajustando o tamanho do cabeçalho */
-.header h1 {
+.headers h1 {
 	font-size: 50px;
 	color: white;
 }
@@ -55,35 +54,197 @@ body {
 }
 /*---------------------------------------------*/
 /*navbar*/
-/* Ajustando a cor e escondendo o conteúdo excedido */
-.topnav {
-	overflow: hidden;
-	background-color: #552586; /* Background color menu*/
+.body_{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	
+    background-color: #552586;/*cor de fundo navbar*/
+
+    font-family: 'Courier New', Courier, monospace;
+}
+header{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: whitesmoke;
+    background-color:  rgba(23, 23, 23, .4);
 }
 
-/* Ajuste nos LINKS do Menu principal */
-.topnav a {
-	float: left;
-    margin-left: 50px;
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 16px 18px;
-	text-decoration: none;
-
-}
-#topnav {/*fonte do navbar, o span é pra aplicar nas tags ,<span> da seção contato, e nas tags p a fonte*/
-        font-weight: 900;
-        letter-spacing: -0.05em;
-        color: white;
-        font-family: Helvetica,Arial,sans-serif; 
+.menu-hamburger{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
-/* Mude a cor ou passar o mouse */
-.topnav a:hover {
-	background-color: #b170f6; /*altera a cor do hover do menu*/
-	color: black;
+/*caixa navbar*/
+.menu-hamburguer-elements{
+    display: flex;
+    width: 80%;
+    height: 7vh;/*tamanho vertical navbar*/
+    justify-content: space-around;
+    align-items: center;
+	z-index: 1;
+}
+
+.menu-hamburguer-elements li{
+    list-style: none;
+    font-size: 1.4rem;
+    margin: 2rem 0;
+    font-size: 1.4rem;
+    list-style: none;
+}
+
+.menu-hamburguer-elements a{
+    color: white;
+    text-decoration: none;
+}
+
+/*hover do menu navbar*/
+.menu-hamburguer-elements a:hover{
+    color: #b170f6;/*quando mouse se sobrepões aos links do navbar*/
 	text-decoration: none; /* Remove o sublinhado */
+}
+
+/*alinhamentos links navbar*/
+/* Alinhar os links do menu à esquerda */
+.menu-hamburguer-elements li:nth-child(-n+3) {
+    margin-right: auto; /* Todos os itens até o 3º (Home, Roupas, Acessórios) vão ficar alinhados à esquerda */
+}
+
+/* O Carrinho e o botão Entrar ficam alinhados à direita */
+.menu-hamburguer-elements li:last-child, /* O botão "Entrar" */
+.menu-hamburguer-elements li:nth-child(4) { /* O Carrinho */
+    margin-left: auto; /* Alinha o carrinho e o botão à direita */
+    display: flex;
+    align-items: center;
+}
+
+/* Ajustes no ícone do carrinho */
+.menu-hamburguer-elements li:nth-child(4) img {
+    margin-right: 10px; /* Dá um pequeno espaço entre o ícone e o texto */
+}
+
+/*---------------------------------------------------------------*/
+/* BOTÃO MENU HAMBURGUER */
+.menu {
+    background-color: #552586;
+	border: 1px dotted white;
+    width: 60px;
+    height: 60px;
+    margin: 1rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+	margin-left: 280px;/*mover o botão hamb. na horizontal*/
+	
+}
+  
+/*item interno do botão menu hamb.*/
+.hamburguer {
+    position: relative;
+    display: block;
+    background: #fff;
+    width: 30px;
+    height: 2px;
+    top: 29px;
+    left: 15px;
+    transition: 0.5s ease-in-out;
+
+}
+  
+.hamburguer:before,
+.hamburguer:after {
+    background: #ffff;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transition: 0.5s ease-in-out;
+}
+  
+.hamburguer:before {
+    top: -10px;
+}
+  
+.hamburguer:after {
+    bottom: -10px;
+}
+  
+input {
+    display: none;
+}
+
+/* rotação dos elementos do span */
+input:checked ~ label .hamburguer {
+    transform: rotate(45deg);
+}
+
+input:checked ~ label .hamburguer:before {
+    transform: rotate(90deg);
+    top: 0;
+}
+  
+input:checked ~ label .hamburguer:after {
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+/*para alterar o lado que abre o menu hamb.*/
+input:checked ~ .menu-hamburguer-elements{
+    right: 0;/*ou left para a esquerda*/
+}
+
+/* ATIVANDO O BOTÃO HAMBURGUER QUANDO O TAMANHO DA TELA ATINGIR 600PX */
+@media (max-width: 600px){
+    
+    header{
+        height: 20%;
+    }
+
+    .menu-hamburguer-elements a:hover{
+        color: #b170f6;/*cor dos links do menu hamb. quando passa o mouse*/
+    }
+    
+    .menu-hamburger{
+        display: flex;
+        width: auto;
+        flex-direction: column;
+        align-self: flex-end;
+        overflow: auto;
+        z-index: 1;
+        color: white;
+	
+    }
+
+	/*quando abre o hamb.*/
+    .menu-hamburguer-elements{
+        width: 60%;
+        height: 90%;
+        background-color: #552586;/*cor quando abre o hamb.*/
+        position: absolute;/*aqui o fixed ele fica fixo quando scrollado */
+        right: -60%;/* Mudei de 'left' para 'right' para que abra da direita */
+        top: 280px;/*distancia do topo da página*/
+        transition: left cubic-bezier(1,0,0,1) .8s;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding-top: 10vh;
+		align-items: center;
+        z-index: 1;
+    }
+
+    .menu{
+        display: flex;
+        height: 60px;
+        width: 60px;
+    }
+
 }
 /*---------------------------------------------*/
 /* Carousel */
@@ -236,7 +397,7 @@ footer {
 
 .texts_footer {
 	color: white;
-	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family: Helvetica, Arial, sans-serif; /* Define a família de fontes */
 }
 .section_texts{
     padding-top: 130px;
